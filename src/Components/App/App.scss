@@ -9,12 +9,12 @@ header{
     	position: fixed;
     	display: flex;
     	justify-content: space-between;
+    	align-items: center;
     	i{
     		font-size:3rem;
     		color:white;
-    		margin-left:1rem;
     		line-height: 3rem;
-
+			margin-left: 1rem;
     	}
     	span{
     		
@@ -24,6 +24,16 @@ header{
     		line-height: 3rem;
     		
 
+    	}
+    	.btn{
+			width:3rem;
+			height: 1.5rem;
+			border: 1px solid #6B6B6B;
+			font-size: 0.8rem;
+			color: white;
+			background: black;
+			line-height: 1.5rem;
+			margin-right: 1rem;
     	}
     }
 content{

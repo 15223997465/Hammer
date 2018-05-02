@@ -5,7 +5,8 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      isShow:false
+      isShow:false,
+      title:"锤子科技商城"
     }
   }
   render() {
@@ -13,8 +14,8 @@ class App extends Component {
       <div className="App">
       	<header>
       			   <i className="icon iconfont icon-liebiao1"></i>
-               <span>锤子科技商城</span>
-               <span isShow={this.state.isShow}>编辑</span>
+               <span>{this.state.title}</span>
+               {this.state.isShow===true?<button className="btn">编辑</button>:<span>　　　　</span>}
       	</header>
         <content>
                 {this.props.children}
@@ -23,21 +24,37 @@ class App extends Component {
         <footer>
         		<span>
                 <NavLink to="/home" activeClassName="active" className="btn">
-                 <i class="icon iconfont icon-zhuye"></i>
-                    首页
+                 <i className="icon iconfont icon-zhuye" onClick={()=>{
+                    this.setState({
+                      isShow:false,
+                      title:"锤子科技商城"
+
+                    });
+                }}>首页</i>
+                    
                 </NavLink>
 
             </span>
             <span>
                 <NavLink to="/classify" activeClassName="active" className="btn">
-                  <i class="icon iconfont icon-liebiao"></i>
-                    分类
+                  <i className="icon iconfont icon-liebiao" onClick={()=>{
+                    this.setState({
+                      isShow:false,
+                      title:"分类"
+                    });
+                }}>分类</i>
+                    
                 </NavLink>
             </span>
             <span>
-                <NavLink to="/car" activeClassName="active" className="btn">
-                <i class="icon iconfont icon-56"></i>
-                购物车
+                <NavLink to="/car" activeClassName="active" className="btn" >
+                <i className="icon iconfont icon-56" onClick={()=>{
+                    this.setState({
+                      isShow:true,
+                       title:"购物车"
+                    });
+                }}>购物车</i>
+                
             </NavLink>
             </span>
         </footer>
