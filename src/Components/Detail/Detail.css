@@ -1,0 +1,11 @@
+.detailBox {
+  width: 100%; }
+  .detailBox .detailheader {
+    width: 100%;
+    display: flex;
+    font-size: 0.16rem; }
+    .detailBox .detailheader li {
+      flex: 1;
+      list-style: none; }
+      .detailBox .detailheader li a {
+        text-align: center; }
