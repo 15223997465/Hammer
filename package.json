@@ -25,6 +25,11 @@
       "target": "https://www.smartisan.com",
       "host": "www.smartisan.com",
       "changeOrigin": true
+    },
+    "/marketing": {
+      "target": "https://resource.smartisan.com",
+      "host": "resource.smartisan.com",
+      "changeOrigin": true
     }
   }
 }
