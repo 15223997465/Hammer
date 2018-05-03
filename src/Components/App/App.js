@@ -22,8 +22,7 @@ class App extends Component {
         <content>
                 {this.props.children}
                 <NavLink to="/detail/ids=100040603">详情</NavLink>
-                <p>555</p><p>555</p><p>555</p><p>555</p><p>555</p><p>555</p><p>555</p><p>555</p><p>555</p><p>555</p><p>555</p>
-
+                
         </content>
 
          {this.state.footerState===true?
