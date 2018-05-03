@@ -27,7 +27,7 @@
       "host": "www.smartisan.com",
       "changeOrigin": true
     },
-    "/marketing/mobile": {
+    "/marketing": {
       "target": "https://resource.smartisan.com",
       "host": "resource.smartisan.com",
       "changeOrigin": true
