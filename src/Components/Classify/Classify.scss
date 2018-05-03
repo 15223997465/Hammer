@@ -1,0 +1,29 @@
+h2,ul,li,div,img{
+	margin: 0;
+	padding: 0;
+}
+.classify{
+	background: #ebebeb;
+	color: #666;
+	.liststyle{
+		font-size: 0.6rem;
+		background: white;
+		width:100%;
+		margin-bottom: 0.34rem;
+		h2{
+			
+			padding: 0 0.9rem;
+			font-weight: 800;
+			line-height: 3rem;
+			border-bottom: #ebebeb;
+			border-bottom: 1px solid #ebebeb;
+		}
+		img{
+			display: block;
+			padding: 0.7rem 0;
+			margin: 0 auto;
+			width: 95%;
+		}
+	}
+	
+}
