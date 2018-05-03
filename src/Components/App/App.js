@@ -20,9 +20,7 @@ class App extends Component {
                {this.state.isShow===true?<button className="btn">编辑</button>:<span>　　　　</span>}
       	</header>
         <content>
-                {this.props.children}
-                <NavLink to="/detail/ids=100040603">详情</NavLink>
-                
+                {this.props.children}         
         </content>
 
          {this.state.footerState===true?
