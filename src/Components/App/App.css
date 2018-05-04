@@ -36,7 +36,6 @@ header {
 content {
   width: 100%;
   height: auto;
-  overflow-y: scroll;
   position: fixed;
   top: 0.48rem;
   bottom: 0.8rem; }
