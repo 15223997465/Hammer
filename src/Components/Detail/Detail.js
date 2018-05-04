@@ -16,17 +16,47 @@ class Detail extends Component {
     }
   }
   render() {
-    console.log(this.props.location.state.id);
+    console.log(this.props.location.state.id)
     return (
-      <div className="detailBox">
-      		<ul className="detailheader">
-      			<li><a href="#">商品</a></li>
-      			<li><a href="#">详情</a></li>
-      			<li><a href="#">参数</a></li>
-      			<li><a href="#">推荐</a></li>
-      		</ul>
+      <div>
+          <Anchor>
+            <Link href="#goods" title="商品" />
+            <Link href="#details" title="详情" />
+            <Link href="#options" title="参数"/>
+            <Link href="#recommend" title="推荐" />
+          </Anchor>
+          <div className="infobox">
+            <div className="goods" id="goods">
+              <div className="imgbox">
+                <img src={this.state.showdata.ali_image} className="topImg"/>
+              </div>
+              
+              <div className="goodsinfo">
+                  <h2>商品信息</h2>
+                  <div className="info">
+                      <h4>{this.state.showdata.title}</h4>
+                      <p>{this.state.showdata.sub_title}</p>
+                      <span>¥{this.state.showdata.price}</span>
+                  </div>
+              </div>
+          </div>
+          <div className="details" id="details">
+
+
+          </div>
+          <div className="options" id="options">
+
+          </div>
+          <div className="recommend" id="recommend">
+
+          </div>
+
+
+          </div>
+          
       </div>
-    );
+      )
+    
   }
 
   componentDidMount(){
