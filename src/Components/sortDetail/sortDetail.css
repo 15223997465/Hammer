@@ -1,0 +1,20 @@
+h2, ul, li, div, img, p {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+html {
+  font-size: 100px; }
+
+.sortDetail {
+  overflow-y: scroll;
+  position: fixed;
+  background: #ebebeb;
+  color: #666;
+  width: 100%;
+  top: 0.48rem;
+  height: auto;
+  bottom: 0.8rem;
+  font-size: 0.2rem; }
