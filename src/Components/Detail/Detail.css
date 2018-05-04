@@ -1,67 +1,11 @@
-.ant-anchor-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 0.5rem;
-  background: #E8E8E8;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0rem 0.1rem 0.6rem gray;
-  align-items: center; }
-  .ant-anchor-wrapper .ant-anchor {
-    width: 95%;
+.detailBox {
+  width: 100%; }
+  .detailBox .detailheader {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    background: #E8E8E8;
-    height: 0.3rem; }
-    .ant-anchor-wrapper .ant-anchor .ant-anchor-link {
+    font-size: 0.16rem; }
+    .detailBox .detailheader li {
       flex: 1;
-      font-size: 0.15rem;
-      line-height: 0.3rem;
-      text-align: center;
-      border: 1px solid #CFCFCF; }
-      .ant-anchor-wrapper .ant-anchor .ant-anchor-link .ant-anchor-link-title {
-        text-decoration: none;
-        color: gray;
-        display: block;
-        font-weight: 600; }
-      .ant-anchor-wrapper .ant-anchor .ant-anchor-link .ant-anchor-link-title-active {
-        background: #8B8970;
-        color: white;
-        font-weight: 600; }
-
-.infobox {
-  position: fixed;
-  top: 0.98rem;
-  bottom: 0.8rem;
-  overflow-y: scroll;
-  width: 100%;
-  height: auto;
-  background: #F0F0F0; }
-  .infobox .goods {
-    width: 100%; }
-    .infobox .goods .imgbox {
-      width: 100%;
-      height: auto;
-      background: white; }
-      .infobox .goods .imgbox .topImg {
-        display: block;
-        width: 80%;
-        margin: 0 auto; }
-    .infobox .goods .goodsinfo {
-      width: 100%;
-      height: auto;
-      background: white;
-      margin-top: 0.2rem; }
-      .infobox .goods .goodsinfo h2 {
-        font-size: 0.2rem;
-        width: 90%;
-        display: block;
-        height: 0.4rem;
-        line-height: 0.4rem;
-        border-bottom: 1px solid #F0F0F0;
-        margin: 0 auto;
-        font-weight: 600;
-        color: gray; }
-      .infobox .goods .goodsinfo .info {
-        width: 90%;
-        margin: 0 auto; }
+      list-style: none; }
+      .detailBox .detailheader li a {
+        text-align: center; }
