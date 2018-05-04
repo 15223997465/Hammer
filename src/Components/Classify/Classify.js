@@ -50,10 +50,9 @@ class Classify extends Component {
   
     );
   }
-  handleClick(id){
-		
-		this.props.history.push(`/detail/${id}`); 
-		console.log(id);
+  handleClick(ids){
+		this.props.history.push({pathname:"/detail",state:{id:ids}});
+
 	}
   componentWillMount(){
 		axios.get("/marketing/mobile/category_3de2b51f6fd72a45304bee018af1a54a.json").then(res=>{

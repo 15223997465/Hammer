@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import {NavLink} from "react-router-dom";
+import Detail from "../Detail/Detail"
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
       isShow:false,
       title:"锤子科技商城",
