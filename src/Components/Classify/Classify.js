@@ -9,7 +9,8 @@ class Classify extends Component {
 			alldata:null,
 			tempList:[],
 			temp:[],
-			data:[]
+			data:[],
+			jumpNum:null
 		}
 	}
   render() {
@@ -24,15 +25,13 @@ class Classify extends Component {
         				this.state.data.map(item=>
         					<div className="outbox" key={item.title}>
 	        					<p className="title">{item.title}</p>
-	        					<p className="logo"><img src={item.src} /></p>
-	        					{console.log(item.length)}
-	        				<ul className="one">
-	        				
+	        					<p className="logo" onClick={this.ClickDetail.bind(this,item.jumpNum)}><img src={item.src} /></p>
+	        				<ul className="one">	        				
 	        			{item.map(item=>	        				
 	        				<li key={item.id} onClick={this.handleClick.bind(this,item.id)}>
-	        				<img src={item.shop_info.ali_image}/>
-	        				<p>{item.shop_info.sku_mobile_title}</p>
-	        				<i className="iconfont icon-iconfontjiantou5"></i>
+		        				<img src={item.shop_info.ali_image}/>
+		        				<p>{item.shop_info.sku_mobile_title}</p>
+		        				<i className="iconfont icon-iconfontjiantou5"></i>
 	        				</li>
 	        			)}
 	        			</ul>
@@ -55,12 +54,15 @@ class Classify extends Component {
 		this.props.history.push(`/detail/${id}`); 
 		console.log(id);
 	}
+	ClickDetail(id){
+		
+		this.props.history.push(`/sortDetail/${id}`); 
+	}
   componentWillMount(){
 		axios.get("/marketing/mobile/category_3de2b51f6fd72a45304bee018af1a54a.json").then(res=>{
 			this.setState({
 				datalist:res.data,
 			})
-			console.log(this.state.datalist);
 
 
 
@@ -70,7 +72,6 @@ class Classify extends Component {
 			this.setState({
 				alldata:res.data.data.list
 			})
-			console.log(this.state.alldata);
 
 
 			//******************
@@ -95,29 +96,19 @@ class Classify extends Component {
 			}
 			this.state.data.push(this.state.tempList);
 			this.state.temp=[];
-			//console.log(this.state.tempList.title=this.state.datalist[m].name)
 			this.state.tempList.title=this.state.datalist[m].name;	
-			this.state.tempList.src=this.state.datalist[m].image.src;	
+			this.state.tempList.src=this.state.datalist[m].image.src;
+			this.state.tempList.linkUrl=this.state.datalist[m].image.linkUrl;
+			this.state.tempList.jumpNum=(this.state.datalist[m].image.linkUrl).substr((this.state.datalist[m].image.linkUrl).length-2,2)
+
 			this.state.tempList=[];
 	}		
 	this.setState({
 				data:this.state.data
 			})		
-		console.log(this.state.data);	
-
 		})
-
 //*******************************************************************************
-
-
-
-
-
-
-		})
-
-		
-
+		})	
 	}
 }
 
