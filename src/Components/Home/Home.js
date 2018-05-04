@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
 import './Home.css';
 import ReactSwipe from 'react-swipe';
+import Hotphone from './Hotphone'
+import Hotproduct from './Hotproduct'
+import Nut3 from './Nut3'
+import Periphery from './periphery'
+import Pro from './Pro'
+import Pro2 from './Pro2'
+import PurifierandAccessories from './PurifierandAccessories'
+import Selected from './Selected'
 class Home extends Component {
   constructor() {
     super();
     this.state = {
       banner: [],
       shortcut:[],
+      floor:[],
     }
   }
   render() {
@@ -30,6 +39,14 @@ class Home extends Component {
           }
         </ul>
       </div>
+    <Hotproduct data={this.state.floor[0].dataList}  />
+    <Hotphone/>
+    <PurifierandAccessories/>
+    <Nut3/>
+    <Pro2/>
+    <Periphery/>
+    <Pro/>
+    <Selected/>
     </div>);
   }
   componentDidMount() {
@@ -39,8 +56,9 @@ class Home extends Component {
           this.setState({
             banner: data.banner.dataList,
             shortcut:data.shortcut.dataList,
+            floor:data.floors
           })
-          console.log(this.state.shortcut)
+          console.log(this.state.floor,)
         })
       }
     }).catch((res) => {
