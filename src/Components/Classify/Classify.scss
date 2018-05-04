@@ -1,29 +1,70 @@
-h2,ul,li,div,img{
+h2,ul,li,div,img,p{
 	margin: 0;
 	padding: 0;
 }
+li{
+	list-style: none;
+}
+html{
+	font-size:100px;
+}
+
 .classify{
+	overflow-y: scroll;
+	position: fixed;
 	background: #ebebeb;
 	color: #666;
-	.liststyle{
-		font-size: 0.6rem;
-		background: white;
-		width:100%;
-		margin-bottom: 0.34rem;
-		h2{
+	width: 100%;
+	top: 0.48rem;
+	height: auto;
+	bottom: 0.8rem;
+	.container{
+		font-size: 0.2rem;
+		
+		.outbox{
+			background: white;
+			.title{
+				font-size: 0.17rem;
+				border-bottom: 1px solid #ebebeb;
+				line-height: 0.3rem;
+				padding: 0 0.15rem;
+			}
+			.logo{
+				img{
+					width: 96%;
+					display: block;
+					margin:0 auto;
+					padding: 0.15rem 0;
+				}
+				
+			}
+			.one{
+
+				li{
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					border-bottom: 1px solid #ebebeb;
+					padding: 0.05rem 0.1rem;
+				img{
+					width: 10%;
+					}
+				p{
+					font-size: 0.1rem;
+					flex: 1
+					}
+				.icon-iconfontjiantou5{
+
+				}
+				}
+			}
 			
-			padding: 0 0.9rem;
-			font-weight: 800;
-			line-height: 3rem;
-			border-bottom: #ebebeb;
-			border-bottom: 1px solid #ebebeb;
 		}
-		img{
-			display: block;
-			padding: 0.7rem 0;
-			margin: 0 auto;
-			width: 95%;
-		}
+		
+	
 	}
 	
+	
+	
 }
+		
