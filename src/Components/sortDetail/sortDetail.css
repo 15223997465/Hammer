@@ -18,3 +18,5 @@ html {
   height: auto;
   bottom: 0.8rem;
   font-size: 0.2rem; }
+  .sortDetail img {
+    width: 10%; }
