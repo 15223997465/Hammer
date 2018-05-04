@@ -11,7 +11,10 @@ import Classify from "../Components/Classify/Classify"
 import Detail from "../Components/Detail/Detail"
 import sortDetail from "../Components/sortDetail/sortDetail"
 import Car from "../Components/Car/Car"
+import {Provider} from "react-redux";
+import store from "../Redux/Store"
 const router= (
+	<Provider store={store}>
 	<Router>
 		<App>
 		    <Switch>
@@ -24,5 +27,6 @@ const router= (
 			</Switch>
 		</App>
 	</Router>
+	</Provider>
 )
 export default router;

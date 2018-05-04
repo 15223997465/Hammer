@@ -51,18 +51,14 @@ class Classify extends Component {
   
     );
   }
-
-  handleClick(id){
-		
+  handleClick(ids){
 		this.props.history.push({pathname:"/detail",state:{id:ids}});
-		console.log(id);
 	}
 	ClickDetail(id){
 		
 		this.props.history.push(`/sortDetail/${id}`); 
 	}
   componentWillMount(){
-
 		axios.get("/marketing/mobile/category_3de2b51f6fd72a45304bee018af1a54a.json").then(res=>{
 			this.setState({
 				datalist:res.data,

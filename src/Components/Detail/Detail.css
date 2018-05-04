@@ -1,11 +1,49 @@
-.detailBox {
+body, html, i, p, li, ul, b, h2, h4 {
+  margin: 0;
+  padding: 0; }
+
+.ant-anchor-wrapper {
+  position: fixed;
   width: 100%; }
-  .detailBox .detailheader {
-    width: 100%;
-    display: flex;
-    font-size: 0.16rem; }
-    .detailBox .detailheader li {
-      flex: 1;
-      list-style: none; }
-      .detailBox .detailheader li a {
-        text-align: center; }
+  .ant-anchor-wrapper .detailheader {
+    width: 100%; }
+    .ant-anchor-wrapper .detailheader .imgbox {
+      width: 100%;
+      height: auto;
+      background: white; }
+      .ant-anchor-wrapper .detailheader .imgbox .topImg {
+        display: block;
+        width: 80%;
+        margin: 0 auto; }
+    .ant-anchor-wrapper .detailheader .goodsinfo {
+      width: 100%;
+      height: auto;
+      background: white;
+      margin-top: 0.2rem; }
+      .ant-anchor-wrapper .detailheader .goodsinfo h2 {
+        font-size: 0.2rem;
+        width: 90%;
+        display: block;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        border-bottom: 1px solid #F0F0F0;
+        margin: 0 auto;
+        font-weight: 600;
+        color: gray; }
+      .ant-anchor-wrapper .detailheader .goodsinfo .info {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        padding-bottom: 0.2rem; }
+        .ant-anchor-wrapper .detailheader .goodsinfo .info h4 {
+          font-size: 0.2rem;
+          margin-top: 0.2rem; }
+        .ant-anchor-wrapper .detailheader .goodsinfo .info p {
+          font-size: 0.14rem;
+          color: #969696;
+          margin-top: 0.1rem;
+          margin-bottom: 0.1rem; }
+        .ant-anchor-wrapper .detailheader .goodsinfo .info span {
+          font-size: 0.16rem;
+          display: block;
+          color: red; }
