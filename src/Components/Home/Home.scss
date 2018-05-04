@@ -1,3 +1,31 @@
-div{
-	font-size:56px;
+#Home {
+	font-size: 100px;
+	width: 100%;
+
+	li {
+		list-style: none;
+	}
+
+	.banner {
+		width: 100%;
+		overflow: hidden;
+
+		.loopbanner {
+			a {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 10px;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		.bannerlist {
+			display: flex;
+			justify-content: space-around;
+		}
+	}
 }
