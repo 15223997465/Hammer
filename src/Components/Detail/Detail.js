@@ -16,7 +16,7 @@ class Detail extends Component {
     }
   }
   render() {
-    console.log(this.props.location.state.id)
+    console.log(this.props.location.state.id);
     return (
       <div>
           <Anchor>
@@ -57,6 +57,17 @@ class Detail extends Component {
       </div>
       )
     
+=======
+      <div className="detailBox">
+      		<ul className="detailheader">
+      			<li><a href="#">商品</a></li>
+      			<li><a href="#">详情</a></li>
+      			<li><a href="#">参数</a></li>
+      			<li><a href="#">推荐</a></li>
+      		</ul>
+      </div>
+    );
+>>>>>>> .merge_file_a12744
   }
 
   componentDidMount(){
