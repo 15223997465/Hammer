@@ -1,21 +1,18 @@
 import React, {Component} from 'react';
 import './Home.css';
 import ReactSwipe from 'react-swipe';
-import Hotphone from './Hotphone'
-import Hotproduct from './Hotproduct'
-import Nut3 from './Nut3'
-import Periphery from './periphery'
-import Pro from './Pro'
-import Pro2 from './Pro2'
-import PurifierandAccessories from './PurifierandAccessories'
-import Selected from './Selected'
+import Hotphone from './Hotphone';
+import Hotproduct from './Hotproduct';
+import Nut3 from './Nut3';
+import Pro from './Pro';
+import PurifierandAccessories from './PurifierandAccessories';
 class Home extends Component {
   constructor() {
     super();
     this.state = {
       banner: [],
-      shortcut:[],
-      floor:[],
+      shortcut: [],
+      floor: []
     }
   }
   render() {
@@ -33,31 +30,31 @@ class Home extends Component {
         </ReactSwipe>
         <ul className="bannerlist">
           {
-            this.state.shortcut.map(item=>{
-              return <li key={item.src}><a href={item.linkUrl}><img src={item.src} alt="bannerlistimg"/><p>{item.labelTitle}</p></a></li>
+            this.state.shortcut.map(item => {
+              return <li key={item.src}>
+                <a href={item.linkUrl}><img src={item.src} alt="bannerlistimg"/>
+                  <p>{item.labelTitle}</p>
+                </a>
+              </li>
             })
           }
         </ul>
       </div>
-    <Hotproduct data={this.state.floor[0].dataList}  />
-    <Hotphone/>
-    <PurifierandAccessories/>
-    <Nut3/>
-    <Pro2/>
-    <Periphery/>
-    <Pro/>
-    <Selected/>
+      <Hotproduct dataList={this.state.floor[0]}/>
+      <Hotphone dataList={this.state.floor[2]}/>
+      <PurifierandAccessories dataList={this.state.floor[4]}/>
+      <Nut3 dataList={this.state.floor[6]}/>
+      <Nut3 dataList={this.state.floor[7]}/>
+    <Nut3 dataList={this.state.floor[8]}/>
+    <Pro dataList={this.state.floor[10]}/>
+    <Nut3 dataList={this.state.floor[12]}/>
     </div>);
   }
   componentDidMount() {
     fetch('../../../home.json').then((res) => {
       if (res.ok) {
         res.json().then((data) => {
-          this.setState({
-            banner: data.banner.dataList,
-            shortcut:data.shortcut.dataList,
-            floor:data.floors
-          })
+          this.setState({banner: data.banner.dataList, shortcut: data.shortcut.dataList, floor: data.floors})
           console.log(this.state.floor,)
         })
       }
