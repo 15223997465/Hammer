@@ -1,31 +1,57 @@
 #Home {
-	font-size: 100px;
-	width: 100%;
+  width: 100%;
+  font-size: 0.16rem;
 
-	li {
-		list-style: none;
-	}
+  li {
+    list-style: none;
+  }
 
-	.banner {
-		width: 100%;
-		overflow: hidden;
+  a {
+    text-decoration: none;
+  }
 
-		.loopbanner {
-			a {
-				display: block;
-				width: 100%;
-				box-sizing: border-box;
-				padding: 10px;
+  .banner {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 0.05rem solid #e4e4e4;
 
-				img {
-					width: 100%;
-				}
-			}
-		}
+    .loopbanner {
+      a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.1rem;
 
-		.bannerlist {
-			display: flex;
-			justify-content: space-around;
-		}
-	}
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .bannerlist {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      padding: 0.1rem;
+      box-sizing: border-box;
+
+      li {
+        flex: 1;
+
+        a {
+          color: #666;
+        }
+
+        img {
+          width: 0.25rem;
+        }
+
+        p {
+          font-size: 0.14rem;
+          line-height: 0.3rem;
+        }
+      }
+    }
+  }
 }

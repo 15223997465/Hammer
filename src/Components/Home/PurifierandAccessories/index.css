@@ -1,0 +1,17 @@
+#PurifierandAccessories {
+  font-size: 0.16rem;
+  box-sizing: border-box; }
+  #PurifierandAccessories li {
+    list-style: none; }
+  #PurifierandAccessories a {
+    text-decoration: none; }
+  #PurifierandAccessories h3 {
+    color: #666;
+    box-sizing: border;
+    padding: 0 0.1rem;
+    margin: 0;
+    line-height: 0.4rem;
+    font-size: 0.2rem;
+    font-weight: normal; }
+    #PurifierandAccessories h3 span {
+      float: right; }

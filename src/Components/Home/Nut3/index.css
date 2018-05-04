@@ -1,0 +1,48 @@
+#nut3 {
+  font-size: 0.16rem;
+  box-sizing: border-box;
+  border-bottom: 0.05rem solid #e4e4e4; }
+  #nut3 li {
+    list-style: none; }
+  #nut3 a {
+    text-decoration: none; }
+  #nut3 h3 {
+    color: #666;
+    box-sizing: border;
+    padding: 0 0.1rem;
+    margin: 0;
+    line-height: 0.4rem;
+    font-size: 0.2rem;
+    font-weight: normal; }
+    #nut3 h3 span {
+      float: right; }
+  #nut3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0.18rem 0.12rem 0; }
+    #nut3 ul li {
+      width: 50%;
+      box-sizing: border-box; }
+      #nut3 ul li img {
+        width: 100%; }
+      #nut3 ul li .info {
+        font-size: 0.14rem;
+        padding: 0.08rem 0.12rem 0.18rem;
+        box-sizing: border-box; }
+        #nut3 ul li .info h4 {
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: #333; }
+        #nut3 ul li .info .desc {
+          margin-top: 0.05rem; }
+        #nut3 ul li .info .price {
+          color: red; }
+        #nut3 ul li .info p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }

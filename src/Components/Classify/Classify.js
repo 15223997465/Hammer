@@ -7,17 +7,18 @@ class Classify extends Component {
 		this.state={
 			datalist:null,
 			alldata:null,
+
 			tempList:[],
 			temp:[],
 			data:[],
 			jumpNum:null
+
 		}
 	}
   render() {
-  	const arr=["11","22"]
-
     return (
       <div className="classify">
+
       {
       	this.state.data&&this.state.alldata?
       		<div className="container">
@@ -42,6 +43,7 @@ class Classify extends Component {
         				:null
 
       }
+
   
       </div>
   
@@ -49,6 +51,7 @@ class Classify extends Component {
   
     );
   }
+
   handleClick(id){
 		
 		this.props.history.push(`/detail/${id}`); 
@@ -59,10 +62,12 @@ class Classify extends Component {
 		this.props.history.push(`/sortDetail/${id}`); 
 	}
   componentWillMount(){
+
 		axios.get("/marketing/mobile/category_3de2b51f6fd72a45304bee018af1a54a.json").then(res=>{
 			this.setState({
 				datalist:res.data,
 			})
+
 
 
 
@@ -109,6 +114,7 @@ class Classify extends Component {
 		})
 //*******************************************************************************
 		})	
+
 	}
 }
 
