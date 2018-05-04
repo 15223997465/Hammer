@@ -4,59 +4,23 @@ body, html, i, p, li, ul, b, h2, h4 {
 
 .ant-anchor-wrapper {
   position: fixed;
-  width: 100%;
-  height: 0.5rem;
-  background: #E8E8E8;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0rem 0.1rem 0.6rem gray;
-  align-items: center; }
-  .ant-anchor-wrapper .ant-anchor {
-    width: 95%;
-    display: flex;
-    justify-content: space-around;
-    background: #E8E8E8;
-    height: 0.3rem; }
-    .ant-anchor-wrapper .ant-anchor .ant-anchor-link {
-      flex: 1;
-      font-size: 0.15rem;
-      line-height: 0.3rem;
-      text-align: center;
-      border: 1px solid #CFCFCF; }
-      .ant-anchor-wrapper .ant-anchor .ant-anchor-link .ant-anchor-link-title {
-        text-decoration: none;
-        color: gray;
-        display: block;
-        font-weight: 600; }
-      .ant-anchor-wrapper .ant-anchor .ant-anchor-link .ant-anchor-link-title-active {
-        background: #8B8970;
-        color: white;
-        font-weight: 600; }
-
-.infobox {
-  position: fixed;
-  top: 0.98rem;
-  bottom: 0.8rem;
-  overflow-y: scroll;
-  width: 100%;
-  height: auto;
-  background: #F0F0F0; }
-  .infobox .goods {
+  width: 100%; }
+  .ant-anchor-wrapper .detailheader {
     width: 100%; }
-    .infobox .goods .imgbox {
+    .ant-anchor-wrapper .detailheader .imgbox {
       width: 100%;
       height: auto;
       background: white; }
-      .infobox .goods .imgbox .topImg {
+      .ant-anchor-wrapper .detailheader .imgbox .topImg {
         display: block;
         width: 80%;
         margin: 0 auto; }
-    .infobox .goods .goodsinfo {
+    .ant-anchor-wrapper .detailheader .goodsinfo {
       width: 100%;
       height: auto;
       background: white;
       margin-top: 0.2rem; }
-      .infobox .goods .goodsinfo h2 {
+      .ant-anchor-wrapper .detailheader .goodsinfo h2 {
         font-size: 0.2rem;
         width: 90%;
         display: block;
@@ -66,20 +30,20 @@ body, html, i, p, li, ul, b, h2, h4 {
         margin: 0 auto;
         font-weight: 600;
         color: gray; }
-      .infobox .goods .goodsinfo .info {
+      .ant-anchor-wrapper .detailheader .goodsinfo .info {
         width: 90%;
         margin: 0 auto;
         height: auto;
         padding-bottom: 0.2rem; }
-        .infobox .goods .goodsinfo .info h4 {
+        .ant-anchor-wrapper .detailheader .goodsinfo .info h4 {
           font-size: 0.2rem;
           margin-top: 0.2rem; }
-        .infobox .goods .goodsinfo .info p {
+        .ant-anchor-wrapper .detailheader .goodsinfo .info p {
           font-size: 0.14rem;
           color: #969696;
           margin-top: 0.1rem;
           margin-bottom: 0.1rem; }
-        .infobox .goods .goodsinfo .info span {
+        .ant-anchor-wrapper .detailheader .goodsinfo .info span {
           font-size: 0.16rem;
           display: block;
           color: red; }

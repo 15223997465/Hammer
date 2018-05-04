@@ -20,7 +20,7 @@ const router= (
 				<Route path="/home" component={Home}/>
 				<Route path="/classify" component={Classify}/>
 				<Route path="/car" component={Car}/>
-				<Route path="/detail" component={Detail}/>
+				<Route path="/detail/:id" component={Detail}/>
 				<Redirect from="*" to="/home"/>
 			</Switch>
 		</App>
