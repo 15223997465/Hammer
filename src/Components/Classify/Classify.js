@@ -54,7 +54,7 @@ class Classify extends Component {
 
   handleClick(id){
 		
-		this.props.history.push(`/detail/${id}`); 
+		this.props.history.push({pathname:"/detail",state:{id:ids}});
 		console.log(id);
 	}
 	ClickDetail(id){
