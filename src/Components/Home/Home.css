@@ -1,2 +1,18 @@
-div {
-  font-size: 56px; }
+#Home {
+  font-size: 100px;
+  width: 100%; }
+  #Home li {
+    list-style: none; }
+  #Home .banner {
+    width: 100%;
+    overflow: hidden; }
+    #Home .banner .loopbanner a {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px; }
+      #Home .banner .loopbanner a img {
+        width: 100%; }
+    #Home .banner .bannerlist {
+      display: flex;
+      justify-content: space-around; }
