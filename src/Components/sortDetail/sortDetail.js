@@ -33,13 +33,20 @@ class sortDetail extends Component {
       </div>
     );
   }
-componentDidMount(){   
+componentDidMount(){ 
+var m=0;  
     axios.get(`/product/spus?category_id=${this.props.match.params.id}&page=1&page_size=20&sort=sort`).then(res=>{
       this.setState({
         datalist:res.data.data.list
       })
-
-      console.log(this.state.datalist[0].sku_info[0].ali_image)
+      
+      for(let i=0;i<this.state.datalist.length;i++){
+        //this.state.datalist.src=this.state.datalist[i].sku_info[i].ali_image
+        this.state.datalist[i].src="11";
+      }
+       console.log(this.state.datalist[0].sku_info[0].ali_image)
+       console.log(this.state.datalist)
+       
     })
 
 }

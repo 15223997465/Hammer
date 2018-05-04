@@ -1,11 +1,49 @@
 
-body, html, i, p, li, ul ,b,h2,h4{
-  margin: 0;
-  padding: 0; }
 	.ant-anchor-wrapper{
 	position:fixed;
 	width:100%;
-	.detailheader{
+	height: 0.5rem;
+	background:#E8E8E8; 
+	display: flex;
+	justify-content: center;
+	box-shadow:0rem 0.1rem 0.6rem gray;
+	align-items: center;
+
+	.ant-anchor{
+		width:95%;
+		display: flex;
+		justify-content: space-around;
+		background:#E8E8E8;
+		height: 0.3rem;
+		.ant-anchor-link{
+			flex:1;
+			font-size: 0.15rem;
+			line-height: 0.3rem;
+			text-align: center;	
+			border:1px solid #CFCFCF;
+			.ant-anchor-link-title{
+				text-decoration: none;
+				color: gray;
+				display: block;
+				font-weight: 600;
+			}
+			.ant-anchor-link-title-active{
+				background: #8B8970;
+				color: white;
+				font-weight: 600;
+			}
+	}
+}
+}
+.infobox{
+	position: fixed;
+	top: 0.98rem;
+	bottom: 0.8rem;
+	overflow-y: scroll;
+	width: 100%;
+	height: auto;
+	background: #F0F0F0;
+	.goods{
 		width:100%;
 		.imgbox{
 			width: 100%;
@@ -37,8 +75,6 @@ body, html, i, p, li, ul ,b,h2,h4{
 			.info{
 				width: 90%;
 				margin: 0 auto;
-				height:auto;
-				padding-bottom: 0.2rem;
 				h4{
 					font-size: 0.2rem;
 					margin-top: 0.2rem;
@@ -53,9 +89,11 @@ body, html, i, p, li, ul ,b,h2,h4{
 					font-size: 0.16rem;
 					display: block;
 					color: red;
-
 				}
 			}
 		}
 	}
 }
+
+
+
