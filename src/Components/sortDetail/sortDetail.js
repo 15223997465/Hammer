@@ -8,7 +8,7 @@ class sortDetail extends Component {
     super(props);
     this.state={
       datalist:null,
-      imgData:null
+      data:[]
     }
   }
   render() {
@@ -19,11 +19,12 @@ class sortDetail extends Component {
         <div>
         {
             
-          this.state.datalist.map(item=>
-            <div>
-            <p>{item.name}</p>
+          this.state.data.map(item=>
+            <div key={item.sku_id}>
+            <img src={item.ali_image} />
             <span>{item.price}</span>
-            <p>{item.shop_info.spu_sub_title}</p>
+            <p>{item.title}</p>
+            <p>{item.sub_title}</p>
             </div>
            )
             
@@ -42,8 +43,15 @@ var m=0;
       })
       
       for(let i=0;i<this.state.datalist.length;i++){
-        //this.state.datalist.src=this.state.datalist[i].sku_info[i].ali_image
-        this.state.datalist[i].src="11";
+        if(this.state.datalist[i].sku_info){
+          //this.state.data[i]=this.state.datalist[i].sku_info
+          //console.log(this.state.datalist[i].sku_info[0])
+          this.state.data.push(this.state.datalist[i].sku_info[0])
+          this.setState({
+            data:this.state.data
+          })
+
+        }
       }
        console.log(this.state.datalist[0].sku_info[0].ali_image)
        console.log(this.state.datalist)
