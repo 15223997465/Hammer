@@ -16,14 +16,16 @@ class sortDetail extends Component {
       {
         this.state.datalist?
         <div>
-        {
-            
+        {            
           this.state.data.map(item=>
-            <div key={item.sku_id}>
-            <img src={item.ali_image} />
-            <span>{item.price}</span>
-            <p>{item.title}</p>
-            <p>{item.sub_title}</p>
+            <div key={item.sku_id} className="outbox" onClick={this.handleClick.bind(this,item.sku_id)}>
+              <img src={item.ali_image} className="showimg"/>
+              <div className="righttext">
+                <p>{item.title}</p>                             
+                <p>{item.sub_title}</p>
+                <i>¥</i><span>{item.price}</span> 
+              </div>
+              
             </div>
            )
             
@@ -33,6 +35,9 @@ class sortDetail extends Component {
       }
       </div>
     );
+  }
+  handleClick(ids){
+    this.props.history.push({pathname:"/detail",state:{id:ids}});
   }
 componentDidMount(){ 
 var m=0;  

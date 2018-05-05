@@ -20,14 +20,15 @@ html {
   .classify .container {
     font-size: 0.2rem; }
     .classify .container .outbox {
-      background: white; }
+      background: white;
+      margin-bottom: 0.05rem; }
       .classify .container .outbox .title {
         font-size: 0.17rem;
         border-bottom: 1px solid #ebebeb;
         line-height: 0.3rem;
-        padding: 0 0.15rem; }
+        padding: 0 0.17rem; }
       .classify .container .outbox .logo img {
-        width: 96%;
+        width: 95%;
         display: block;
         margin: 0 auto;
         padding: 0.15rem 0; }
