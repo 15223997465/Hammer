@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Car.css';
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
 class Car extends Component {
   render() {
     return (
@@ -10,6 +11,20 @@ class Car extends Component {
       </div>
     );
   }
+  componentDidMount() {
+  	this.props.mychangeCarTitle("购物车");
+  }
 }
 
-export default Car;
+export default connect(null,
+    {
+
+    mychangeCarTitle:(data)=>{
+      console.log(data);
+      return {
+        type:"typeTitle",
+        payload:data
+      }
+    }
+  }
+)(Car);

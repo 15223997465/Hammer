@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './sortDetail.css';
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
 import axios from "axios"
 class sortDetail extends Component {
   constructor(props){
@@ -46,7 +47,7 @@ var m=0;
       }
        console.log(this.state.datalist[0].sku_info[0].ali_image)
        console.log(this.state.datalist)
-       
+        this.props.mychangesortTitle("第三方产品");
     })
 
 }
@@ -54,4 +55,15 @@ var m=0;
   
 }
 
-export default sortDetail;
+export default connect(null,
+    {
+
+    mychangesortTitle:(data)=>{
+      console.log(data);
+      return {
+        type:"typeTitle",
+        payload:data
+      }
+    }
+  }
+)(sortDetail);

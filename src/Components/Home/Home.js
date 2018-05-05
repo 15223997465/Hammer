@@ -3,6 +3,7 @@ import './Home.css';
 import ReactSwipe from 'react-swipe';
 import Hotphone from './Hotphone';
 import Hotproduct from './Hotproduct';
+import {connect} from "react-redux";
 import Nut3 from './Nut3';
 import Pro from './Pro';
 import PurifierandAccessories from './PurifierandAccessories';
@@ -56,13 +57,26 @@ class Home extends Component {
         res.json().then((data) => {
           this.setState({banner: data.banner.dataList, shortcut: data.shortcut.dataList, floor: data.floors})
           console.log(this.state.floor,)
+          this.props.mychangeHomeTitle("首页");
         })
       }
     }).catch((res) => {
       console.log(res.status);
     });
-
+    
   }
+  
 }
 
-export default Home;
+export default connect(null,
+    {
+
+    mychangeHomeTitle:(data)=>{
+      console.log(data);
+      return {
+        type:"typeTitle",
+        payload:data
+      }
+    }
+  }
+)(Home);;

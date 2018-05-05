@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import {NavLink} from "react-router-dom";
 import Detail from "../Detail/Detail"
+import {connect} from "react-redux"
 class App extends Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state={
       isShow:false,
-      title:"锤子科技商城",
       footerState:true,
       shopNum:0
     }
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
       	<header>
       			   <i className="icon iconfont icon-liebiao1"></i>
-               <span>{this.state.title}</span>
+                <span>{this.props.mytitle}</span>
                {this.state.isShow===true?<button className="btn">编辑</button>:<span>　　　　</span>}
       	</header>
         <content>
@@ -31,8 +31,6 @@ class App extends Component {
                  <i className="icon iconfont icon-zhuye" onClick={()=>{
                     this.setState({
                       isShow:false,
-                      title:"锤子科技商城"
-
                     });
                 }}></i>
                   <p className="text">首页</p>
@@ -44,7 +42,6 @@ class App extends Component {
                   <i className="icon iconfont icon-liebiao" onClick={()=>{
                     this.setState({
                       isShow:false,
-                      title:"分类"
                     });
                 }}></i>
                   <p className="text">分类</p>
@@ -55,7 +52,6 @@ class App extends Component {
                 <i className="icon iconfont icon-56" onClick={()=>{
                     this.setState({
                       isShow:true,
-                       title:"购物车"
                     });
                 }}></i>
                 <p className="text">购物车</p>
@@ -76,4 +72,11 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(
+  (state)=>{
+    return {
+      mytitle:state.typeTitleReducer
+    }
+  } 
+
+  ,undefined,undefined,{pure:false})(App);

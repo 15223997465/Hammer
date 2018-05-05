@@ -94,8 +94,9 @@ export default connect(null,
     {
 
     mychangeTitle:(data)=>{
+      console.log(data);
       return {
-        type:"hammerTitle",
+        type:"typeTitle",
         payload:data
       }
     }

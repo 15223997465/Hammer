@@ -1,10 +1,11 @@
 import {createStore,combineReducers,applyMiddleware,compose } from "redux" // 
 
-import titleReducer from "../Reducers/titleReducer";
+import typeTitleReducer from "../Reducers/typeTitleReducer";
 import showReducer from "../Reducers/showReducer";
+
 import reduxthunk from "redux-thunk";
 var reducer =combineReducers({
-	titleReducer,
+	typeTitleReducer,
 	showReducer
 })
 
