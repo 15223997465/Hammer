@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Classify.css';
-import axios from "axios"
+import axios from "axios";
+import {connect} from "react-redux";
 class Classify extends Component {
 	constructor(){
 		super();
@@ -107,10 +108,22 @@ class Classify extends Component {
 				data:this.state.data
 			})		
 		})
+		 this.props.mychangeClassifyTitle("分类");
 //*******************************************************************************
 		})	
 
 	}
 }
 
-export default Classify;
+export default connect(null,
+    {
+
+    mychangeClassifyTitle:(data)=>{
+      console.log(data);
+      return {
+        type:"typeTitle",
+        payload:data
+      }
+    }
+  }
+)(Classify);

@@ -1,20 +1,13 @@
 var showReducer = (prevstate=true,data={})=>{
-
-
 	let {type,payload} = data;
-
-
 	switch(type){
-		case "showTitle":
+		case "showFooter":
 			return true;
-
-		case "hideTitle":
+		case "hideFooter":
 			return false;
 		default:
 			return prevstate;
 	}
-
-	return prevstate;	// 返回是什么， 状态就被改成什么 
+	return prevstate;
 }
-
 export default showReducer
