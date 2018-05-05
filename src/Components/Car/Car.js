@@ -7,7 +7,6 @@ class Car extends Component {
     return (
       <div>
       car
-       <NavLink to="/detail/ids=100040603">详情</NavLink>
       </div>
     );
   }

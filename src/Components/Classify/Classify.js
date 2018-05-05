@@ -119,7 +119,6 @@ export default connect(null,
     {
 
     mychangeClassifyTitle:(data)=>{
-      console.log(data);
       return {
         type:"typeTitle",
         payload:data

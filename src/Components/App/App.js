@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {NavLink} from "react-router-dom";
-import Detail from "../Detail/Detail"
-import {connect} from "react-redux"
+import Detail from "../Detail/Detail";
+import {connect} from "react-redux";
+import history from 'history/createBrowserHistory' 
 class App extends Component {
   constructor(){
     super();
@@ -16,15 +17,18 @@ class App extends Component {
     return (
       <div className="App">
       	<header>
-      			   <i className="icon iconfont icon-liebiao1"></i>
-                <span>{this.props.mytitle}</span>
-               {this.state.isShow===true?<button className="btn">编辑</button>:<span>　　　　</span>}
+      			   {this.props.backState===true?<i className="icon iconfont icon-liebiao1"></i>
+               :<button onClick={
+                this.clickBack.bind(this,null)
+               } className="backBtn"><NavLink to="/classify">返回</NavLink></button>}
+                <span className="title">{this.props.mytitle}</span>
+               {this.state.isShow===true?<button className="btn">编辑</button>:<span className="space">　　　　</span>}
       	</header>
         <content>
                 {this.props.children}         
         </content>
 
-         {this.state.footerState===true?
+         {this.props.footerState===true?
         <footer>
         		<span>
                 <NavLink to="/home" activeClassName="active" className="btn">
@@ -70,13 +74,33 @@ class App extends Component {
       </div>
     );
   }
+    clickBack(){    
+      this.props.mychangeFooter();
+      this.props.mychangeBack();
+  }
 }
 
 export default connect(
   (state)=>{
     return {
-      mytitle:state.typeTitleReducer
+      mytitle:state.typeTitleReducer,
+      footerState:state.footerStateReducer,
+      backState:state.backStateReducer
     }
-  } 
-
-  ,undefined,undefined,{pure:false})(App);
+  },
+  {
+   mychangeFooter:()=>{
+      return{
+        type:"showfooter"
+      }
+    },
+   mychangeBack:()=>{
+      return{
+        type:"hideBack"
+      }
+    }
+  }
+  
+  
+  
+ ,undefined,{pure:false})(App);

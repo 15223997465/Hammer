@@ -77,3 +77,18 @@
           font-size: 0.16rem;
           display: block;
           color: red; }
+  .infobox .details {
+    width: 100%;
+    height: 5rem;
+    font-size: 0.2rem;
+    background: green; }
+  .infobox .options {
+    width: 100%;
+    height: 5rem;
+    font-size: 0.2rem;
+    background: yellow; }
+  .infobox .recommend {
+    width: 100%;
+    height: 5rem;
+    font-size: 0.2rem;
+    background: pink; }

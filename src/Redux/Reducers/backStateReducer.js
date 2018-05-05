@@ -1,13 +1,13 @@
-var showReducer = (prevstate=true,data={})=>{
+var backStateReducer = (prevstate=true,data={})=>{
 	let {type,payload} = data;
 	switch(type){
-		case "showFooter":
+		case "hideBack":
 			return true;
-		case "hideFooter":
+		case "showBack":
 			return false;
 		default:
 			return prevstate;
 	}
 	return prevstate;
 }
-export default showReducer
+export default backStateReducer

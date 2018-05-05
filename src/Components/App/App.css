@@ -18,16 +18,34 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  header .backBtn {
+    outline: none;
+    background: black;
+    border: 1px solid #666;
+    margin-left: 0.16rem; }
+    header .backBtn a {
+      text-decoration: none;
+      color: white; }
   header i {
     font-size: 0.48rem;
     color: white;
     line-height: 0.48rem;
     margin-left: 0.16rem; }
-  header span {
+  header .title {
+    width: 80%;
+    height: 0.48rem;
+    flex: 1;
     font-size: 0.16rem;
+    text-align: center;
     color: white;
     left: 50%;
-    line-height: 0.48rem; }
+    line-height: 0.48rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  header .space {
+    height: 0.48rem;
+    width: 10%; }
   header .btn {
     width: 0.48rem;
     height: 0.24rem;

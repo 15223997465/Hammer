@@ -16,7 +16,6 @@ class Detail extends Component {
     }
   }
   render() {
-    console.log(this.props.location.state.id);
     return (
       <div>
           <Anchor>
@@ -24,7 +23,7 @@ class Detail extends Component {
             <Link href="#details" title="详情" />
             <Link href="#options" title="参数"/>
             <Link href="#recommend" title="推荐" />
-          </Anchor>
+          
           <div className="infobox">
             <div className="goods" id="goods">
               <div className="imgbox">
@@ -42,18 +41,18 @@ class Detail extends Component {
           </div>
           <div className="details" id="details">
 
-
+            详情
           </div>
           <div className="options" id="options">
-
+            参数
           </div>
           <div className="recommend" id="recommend">
-
+            推荐
           </div>
 
 
           </div>
-          
+          </Anchor>
       </div>
       )
   }
@@ -61,7 +60,6 @@ class Detail extends Component {
   componentDidMount(){
     let numstr=this.props.location.state.id.toString();
      numstr=numstr.substring(0,7);
-    console.log(numstr);
     axios.get(`/product/spus?ids=${numstr}`).then(res=>{
             this.setState({
                  detailData:res.data.data.list[0].sku_info,
@@ -78,8 +76,9 @@ class Detail extends Component {
                 })
               }
             }
-            console.log(this.state.showdata);
             this.props.mychangeTitle(this.state.showdata.title);
+            this.props.mychangeFooter();
+            this.props.mychangeBack();
            
     }).catch(err=>{
       console.log(err);
@@ -94,10 +93,19 @@ export default connect(null,
     {
 
     mychangeTitle:(data)=>{
-      console.log(data);
       return {
         type:"typeTitle",
         payload:data
+      }
+    },
+    mychangeFooter:()=>{
+      return{
+        type:"hidefooter",
+      }
+    },
+    mychangeBack:()=>{
+      return{
+        type:"showBack"
       }
     }
   }
