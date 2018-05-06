@@ -1,2 +1,53 @@
 #pro {
-  font-size: 0.16rem; }
+  font-size: 0.16rem;
+  box-sizing: border-box;
+  border-bottom: 0.05rem solid #e4e4e4;
+  overflow: hidden; }
+  #pro li {
+    list-style: none; }
+  #pro a {
+    text-decoration: none; }
+  #pro h3 {
+    color: #666;
+    box-sizing: border;
+    padding: 0 0.1rem;
+    margin: 0;
+    line-height: 0.4rem;
+    font-size: 0.2rem;
+    font-weight: normal; }
+    #pro h3 span {
+      float: right; }
+  #pro ul {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden; }
+    #pro ul li {
+      box-sizing: border-box;
+      padding: 0.1rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e4e4e4; }
+      #pro ul li img {
+        width: 1.2rem;
+        height: 1.2rem; }
+      #pro ul li .info {
+        width: 50%; }
+        #pro ul li .info h4 {
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: #333; }
+        #pro ul li .info .desc {
+          margin-top: 0.05rem; }
+        #pro ul li .info .price {
+          color: red; }
+        #pro ul li .info p {
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }

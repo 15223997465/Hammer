@@ -20,7 +20,7 @@ class nut3 extends Component {
               return (<li key={item.id}>
                 <img src={item.shop_info.ali_image} alt="productimg"/>
                 <div className="info">
-                  <h4>{item.name}</h4>
+                  <h4>{item.product_info.product_name}</h4>
                   <p className="desc">{item.shop_info.sku_mobile_sub_title}</p>
                   <p className="price">¥ {item.price}</p>
                 </div>
@@ -32,13 +32,10 @@ class nut3 extends Component {
       : null)
   }
   componentWillReceiveProps(data){
-    console.log(data.dataList);
-    var length = data.dataList.upperLimit;
     var str = '';
-    for(var i = 0;i<length;i++){
+    for(var i = 0;i<data.dataList.upperLimit;i++){
       str+= data.dataList.dataList[i]+',';
     }
-    console.log(str);
     axios.get(`/product/skus?ids=${str}&with_stock=true&with_spu=true`).then(res=>{
       this.setState({
         data:res.data.data.list

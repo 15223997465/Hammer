@@ -12,7 +12,7 @@ class pro extends Component {
   render() {
     return (
       this.props.dataList
-      ? <div id="nut3">
+      ? <div id="pro">
         <h3>{this.props.dataList.floorName}<span>&gt;</span>
         </h3>
         <ul className="list">
@@ -22,7 +22,7 @@ class pro extends Component {
                 <li key={item.id}>
                   <img src={item.shop_info.ali_image} alt="productimg"/>
                   <div className="info">
-                    <h4>{item.name}</h4>
+                    <h4>{item.product_info.product_name}</h4>
                     <p className="desc">{item.shop_info.sku_mobile_sub_title}</p>
                     <p className="price">¥ {item.price}</p>
                   </div>
