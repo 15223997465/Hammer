@@ -9,13 +9,10 @@
     width: 100%;
     overflow: hidden;
     border-bottom: 0.05rem solid #e4e4e4; }
-    #Home .banner .loopbanner a {
-      display: block;
+    #Home .banner .loopbanner img {
       width: 100%;
       box-sizing: border-box;
       padding: 0.1rem; }
-      #Home .banner .loopbanner a img {
-        width: 100%; }
     #Home .banner .bannerlist {
       width: 100%;
       display: flex;
@@ -32,3 +29,32 @@
         #Home .banner .bannerlist li p {
           font-size: 0.14rem;
           line-height: 0.3rem; }
+  #Home .fourimg {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem;
+    border-bottom: 0.05rem solid #e4e4e4; }
+    #Home .fourimg ul {
+      width: 45%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      #Home .fourimg ul li {
+        width: 100%; }
+        #Home .fourimg ul li img {
+          display: block;
+          width: 100%; }
+    #Home .fourimg .bigimg {
+      width: 50%; }
+      #Home .fourimg .bigimg img {
+        width: 100%; }
+  #Home .twoimg {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.1rem 0;
+    border-bottom: 0.05rem solid #e4e4e4; }
+    #Home .twoimg li {
+      width: 100%;
+      margin-bottom: 0.1rem; }
+      #Home .twoimg li img {
+        width: 100%; }

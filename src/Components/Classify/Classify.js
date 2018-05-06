@@ -28,8 +28,8 @@ class Classify extends Component {
         					<div className="outbox" key={item.title}>
 	        					<p className="title">{item.title}</p>
 	        					<p className="logo" onClick={this.ClickDetail.bind(this,item.jumpNum)}><img src={item.src} /></p>
-	        				<ul className="one">	        				
-	        			{item.map(item=>	        				
+	        				<ul className="one">
+	        			{item.map(item=>
 	        				<li key={item.id} onClick={this.handleClick.bind(this,item.id)}>
 		        				<img src={item.shop_info.ali_image}/>
 		        				<p>{item.shop_info.sku_mobile_title}</p>
@@ -45,18 +45,19 @@ class Classify extends Component {
 
       }
 
-  
+
       </div>
-  
-  
-  
+
+
+
     );
   }
   handleClick(ids){
 		this.props.history.push({pathname:"/detail",state:{id:ids}});
+		console.log(this.props);
 	}
-	ClickDetail(id){		
-		this.props.history.push(`/sortDetail/${id}`); 
+	ClickDetail(id){
+		this.props.history.push(`/sortDetail/${id}`);
 	}
   componentWillMount(){
 		axios.get("/marketing/mobile/category_3de2b51f6fd72a45304bee018af1a54a.json").then(res=>{
@@ -81,14 +82,14 @@ class Classify extends Component {
 			for(var i=0;i<this.state.datalist[m].layout.dataList.length;i++)
 			{
 				this.state.temp.push(this.state.datalist[m].layout.dataList[i].sku);
-				
+
 			}
 			for(var i=0;i<this.state.temp.length;i++)
 			{
 				for(var j=0;j<this.state.alldata.length;j++)
 				{
 					if(this.state.temp[i]==this.state.alldata[j].id)
-					{	
+					{
 						this.state.tempList.push(this.state.alldata[j]);
 
 					}
@@ -97,20 +98,20 @@ class Classify extends Component {
 			}
 			this.state.data.push(this.state.tempList);
 			this.state.temp=[];
-			this.state.tempList.title=this.state.datalist[m].name;	
+			this.state.tempList.title=this.state.datalist[m].name;
 			this.state.tempList.src=this.state.datalist[m].image.src;
 			this.state.tempList.linkUrl=this.state.datalist[m].image.linkUrl;
 			this.state.tempList.jumpNum=(this.state.datalist[m].image.linkUrl).substr((this.state.datalist[m].image.linkUrl).length-2,2)
 
 			this.state.tempList=[];
-	}		
+	}
 	this.setState({
 				data:this.state.data
-			})		
+			})
 		})
 		 this.props.mychangeClassifyTitle("分类");
 //*******************************************************************************
-		})	
+		})
 
 	}
 }

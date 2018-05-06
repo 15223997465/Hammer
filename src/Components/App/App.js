@@ -3,7 +3,7 @@ import './App.css';
 import {NavLink} from "react-router-dom";
 import Detail from "../Detail/Detail";
 import {connect} from "react-redux";
-import history from 'history/createBrowserHistory' 
+import history from 'history/createBrowserHistory'
 class App extends Component {
   constructor(){
     super();
@@ -25,7 +25,7 @@ class App extends Component {
                {this.state.isShow===true?<button className="btn">编辑</button>:<span className="space">　　　　</span>}
       	</header>
         <content>
-                {this.props.children}         
+                {this.props.children}
         </content>
 
          {this.props.footerState===true?
@@ -74,9 +74,10 @@ class App extends Component {
       </div>
     );
   }
-    clickBack(){    
+    clickBack(){
       this.props.mychangeFooter();
       this.props.mychangeBack();
+      console.log(this.props);
   }
 }
 
@@ -100,7 +101,7 @@ export default connect(
       }
     }
   }
-  
-  
-  
+
+
+
  ,undefined,{pure:false})(App);
