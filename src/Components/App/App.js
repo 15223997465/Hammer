@@ -17,7 +17,12 @@ class App extends Component {
     return (
       <div className="App">
       	<header>
-      			   {this.props.backState===true?<i className="icon iconfont icon-liebiao1"></i>
+      			  
+      			   {this.props.backState===true?null
+               :<button onClick={
+                this.clickBack.bind(this,null)
+               } className="backBtn"><NavLink to="/home">首页</NavLink></button>}
+      			    {this.props.backState===true?<i className="icon iconfont icon-liebiao1"></i>
                :<button onClick={
                 this.clickBack.bind(this,null)
                } className="backBtn"><NavLink to="/classify">返回</NavLink></button>}
@@ -77,7 +82,6 @@ class App extends Component {
     clickBack(){
       this.props.mychangeFooter();
       this.props.mychangeBack();
-      console.log(this.props);
   }
 }
 
