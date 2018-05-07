@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
       	<header>
-      			  
+
       			   {this.props.backState===true?null
                :<button onClick={
                 this.clickBack.bind(this,null)
